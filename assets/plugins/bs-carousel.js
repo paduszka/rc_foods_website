@@ -3,15 +3,14 @@ var BsCarousel = function () {
      $('.carousel').carousel({
          interval: 3000
      });
-    
+
     // smart height detection for all major screens
      if (Layout.getViewPort().width > 1600) {
-         height = $(window).height() - $('.subscribe').outerHeight();  
-         // full height for high resolution
+         height = $(window).height() - $('.subscribe').outerHeight();  // full height for high resolution
      } else if (Layout.getViewPort().height > height) {
          height = Layout.getViewPort().height;
      }
-     
+
     (function( $ ) {
         //Function to animate slider captions 
         function doAnimations( elems ) {
@@ -38,7 +37,7 @@ var BsCarousel = function () {
         doAnimations($firstAnimatingElems);
         
         //Pause carousel  
-        $myCarousel.carousel('pause');
+        /*$myCarousel.carousel('pause');*/
         
         //Other slides to be animated on carousel slide event 
         $myCarousel.on('slide.bs.carousel', function (e) {
